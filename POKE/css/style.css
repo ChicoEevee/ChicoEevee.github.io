@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'Helvetica Neue LT Pro';
+    src: url('HelveticaNeueLTPro-XBlkCn.woff2') format('woff2'),
+        url('HelveticaNeueLTPro-XBlkCn.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+p, h1 {
+  font-family: 'Helvetica Neue LT Pro';
+  text-align: center;
+  color: #f1faee;
+  font-size: 20px;
+}
+table, th, td {
+  border: 3px solid black;
+  border-collapse: collapse;
+}
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+#Modulos {
+  visibility: hidden;
+}
+td {
+  font-family: 'Helvetica Neue LT Pro';
+  background-color: #f1faee;
+  text-align: center;
+  color: #1d3557;
+}
+th {
+  font-family: 'Helvetica Neue LT Pro';
+  background-color: #1d3557;
+  text-align: center;
+  color: #f1faee;
+}
+body {
+    background: #000 url(background.png) no-repeat center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height:100%;
+}
+a.botones:hover {
+	filter: blur(0px);
+}
+a.botones{
+	filter: saturate(0%);
+}
+a.botones:active {
+	filter: saturate(100%);
+}
+img {
+	margin-left: auto;
+	margin-right: auto;
+}
