@@ -19,7 +19,11 @@
         const header = new Uint8Array([...data.slice(0, 128)].map((value, index) => value ^ (index < 80 ? 0xFF : 0x00)));
         const newData = data.slice(128);
 
-        const out = new Blob([new Uint8Array([0x10, 0x00, 0x00, 0x00])], { type: 'application/octet-stream' });
+        const mergedData = new Uint8Array(header.length + newData.length);
+        mergedData.set(header);
+        mergedData.set(newData, header.length);
+
+        const out = new Blob([new Uint8Array([0x10, 0x00, 0x00, 0x00]), mergedData], { type: 'application/octet-stream' });
         const url = URL.createObjectURL(out);
         const link = document.createElement('a');
         link.href = url;
