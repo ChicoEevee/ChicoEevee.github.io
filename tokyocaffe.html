@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Productos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .total {
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function calcularTotal() {
+            const precios = {
+                "Ramen": 20,
+                "Noodles": 20,
+                "Cupcake": 10,
+                "Sushi": 30,
+                "Helado de Fresa": 20,
+                "Mochis": 10,
+                "Refresco de frambuesa": 15,
+                "Café": 10,
+                "Té Helado": 20,
+                "Batido de Chocolate": 15
+            };
+
+            let totalGeneral = 0;
+
+            for (const producto in precios) {
+                const cantidad = document.getElementById(`cantidad-${producto}`).value;
+                const totalProducto = cantidad * precios[producto];
+                document.getElementById(`total-${producto}`).textContent = totalProducto.toFixed(2);
+                totalGeneral += totalProducto;
+            }
+
+            document.getElementById('total-general').textContent = totalGeneral.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h1>TOKYO CAFFE</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ramen</td>
+                <td>20</td>
+                <td><input type="number" id="cantidad-Ramen" value="0" min="0" oninput="calcularTotal()"></td>
+                <td id="total-Ramen">0.00</td>
+            </tr>
+            <tr>
+                <td>Noodles</td>
+                <td>20</td>
+                <td><input type="number" id="cantidad-Noodles" value="0" min="0" oninput="calcularTotal()"></td>
+                <td id="total-Noodles">0.00</td>
+            </tr>
+            <tr>
+                <td>Cupcake</td>
+                <td>10</td>
+                <td><input type="number" id="cantidad-Cupcake" value="0" min="0" oninput="calcularTotal()"></td>
+                <td id="total-Cupcake">0.00</td>
+            </tr>
+            <tr>
+                <td>Sushi</td>
+                <td>30</td>
+                <td><input type="number" id="cantidad-Sushi" value="0" min="0" oninput="calcularTotal()"></td>
+                <td id="total-Sushi">0.00</td>
+            </tr>
+            <tr>
+                <td>Helado de Fresa</td>
+                <td>20</td>
+                <td><input type="number" id="cantidad-Helado de Fresa" value="0" min="0" oninput="calcularTotal()"></td>
+                <td id="total-Helado de Fresa">0.00</td>
+            </tr>
+            <tr>
+                <td>Mochis</td>
+                <td>10</td>
+                <td><input type="number" id="cantidad-Mochis" value="0" min="0" oninput="calcularTotal()"></td>
+                <td id="total-Mochis">0.00</td>
+            </tr>
+            <tr>
+                <td>Refresco de frambuesa</td>
+                <td>15</td>
+                <td><input type="number" id="cantidad-Refresco de frambuesa" value="0" min="0" oninput="calcularTotal()"></td>
+                <td id="total-Refresco de frambuesa">0.00</td>
+            </tr>
+            <tr>
+                <td>Café</td>
+                <td>10</td>
+                <td><input type="number" id="cantidad-Café" value="0" min="0" oninput="calcularTotal()"></td>
+                <td id="total-Café">0.00</td>
+            </tr>
+            <tr>
+                <td>Té Helado</td>
+                <td>20</td>
+                <td><input type="number" id="cantidad-Té Helado" value="0" min="0" oninput="calcularTotal()"></td>
+                <td id="total-Té Helado">0.00</td>
+            </tr>
+            <tr>
+                <td>Batido de Chocolate</td>
+                <td>15</td>
+                <td><input type="number" id="cantidad-Batido de Chocolate" value="0" min="0" oninput="calcularTotal()"></td>
+                <td id="total-Batido de Chocolate">0.00</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" class="total">Total General</td>
+                <td id="total-general">0.00</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
