@@ -41,6 +41,21 @@
         }
     </style>
     <script>
+        const precios = {
+                "Hidromiel Asgardiana": 20,
+                "Copa de Sangre": 10,
+                "Leche Lunar": 10,
+                "Copa de Hierbas Elficas": 10,
+                "Elixir Rejuvenecedor": 10,
+                "Elixir Cósmico": 10,
+                "Pancakes de duende": 15,
+                "Estofado de setas": 15,
+                "Entrecot divino": 20,
+                "Ensalada de druida": 15,
+                "Pinchitos de dragón": 15,
+                "Yogurt Tres Lunas": 10
+        };
+
         function incrementarCantidad(producto) {
             const input = document.getElementById(`cantidad-${producto}`);
             input.value = parseInt(input.value) + 1;
@@ -56,21 +71,6 @@
         }
 
         function calcularTotal() {
-            const precios = {
-                "Hidromiel Asgardiana": 20,
-                "Copa de Sangre": 10,
-                "Leche Lunar": 10,
-                "Copa de Hierbas Elficas": 10,
-                "Elixir Rejuvenecedor": 10,
-                "Elixir Cósmico": 10,
-                "Pancakes de duende": 15,
-                "Estofado de setas": 15,
-                "Entrecot divino": 20,
-                "Ensalada de druida": 15,
-                "Pinchitos de dragón": 15,
-                "Yogurt Tres Lunas": 10
-            };
-
             let totalGeneral = 0;
 
             for (const producto in precios) {
@@ -84,22 +84,16 @@
         }
 
         function resetearCantidades() {
-            const productos = [
-                "Ramen", "Noodles", "Cupcake", "Sushi", "Helado de Fresa",
-                "Mochis", "Refresco de frambuesa", "Café", "Té Helado", "Batido de Chocolate"
-            ];
-            
-            productos.forEach(producto => {
+            for (const producto in precios) {
                 document.getElementById(`cantidad-${producto}`).value = 0;
                 document.getElementById(`total-${producto}`).textContent = "0";
-            });
-
+            }
             document.getElementById('total-general').textContent = "0";
         }
     </script>
 </head>
 <body>
-    <h1>TOKYO CAFFE</h1>
+    <h1>LAS TRES LUNAS</h1>
     <table>
         <thead>
             <tr>
@@ -110,126 +104,24 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Ramen</td>
-                <td>20</td>
-                <td>
-                    <div class="quantity-controls">
-                        <button onclick="decrementarCantidad('Ramen')">-</button>
-                        <input type="number" id="cantidad-Ramen" value="0" min="0" readonly>
-                        <button onclick="incrementarCantidad('Ramen')">+</button>
-                    </div>
-                </td>
-                <td id="total-Ramen">0</td>
-            </tr>
-            <tr>
-                <td>Noodles</td>
-                <td>20</td>
-                <td>
-                    <div class="quantity-controls">
-                        <button onclick="decrementarCantidad('Noodles')">-</button>
-                        <input type="number" id="cantidad-Noodles" value="0" min="0" readonly>
-                        <button onclick="incrementarCantidad('Noodles')">+</button>
-                    </div>
-                </td>
-                <td id="total-Noodles">0</td>
-            </tr>
-            <tr>
-                <td>Cupcake</td>
-                <td>10</td>
-                <td>
-                    <div class="quantity-controls">
-                        <button onclick="decrementarCantidad('Cupcake')">-</button>
-                        <input type="number" id="cantidad-Cupcake" value="0" min="0" readonly>
-                        <button onclick="incrementarCantidad('Cupcake')">+</button>
-                    </div>
-                </td>
-                <td id="total-Cupcake">0</td>
-            </tr>
-            <tr>
-                <td>Sushi</td>
-                <td>30</td>
-                <td>
-                    <div class="quantity-controls">
-                        <button onclick="decrementarCantidad('Sushi')">-</button>
-                        <input type="number" id="cantidad-Sushi" value="0" min="0" readonly>
-                        <button onclick="incrementarCantidad('Sushi')">+</button>
-                    </div>
-                </td>
-                <td id="total-Sushi">0</td>
-            </tr>
-            <tr>
-                <td>Helado de Fresa</td>
-                <td>20</td>
-                <td>
-                    <div class="quantity-controls">
-                        <button onclick="decrementarCantidad('Helado de Fresa')">-</button>
-                        <input type="number" id="cantidad-Helado de Fresa" value="0" min="0" readonly>
-                        <button onclick="incrementarCantidad('Helado de Fresa')">+</button>
-                    </div>
-                </td>
-                <td id="total-Helado de Fresa">0</td>
-            </tr>
-            <tr>
-                <td>Mochis</td>
-                <td>10</td>
-                <td>
-                    <div class="quantity-controls">
-                        <button onclick="decrementarCantidad('Mochis')">-</button>
-                        <input type="number" id="cantidad-Mochis" value="0" min="0" readonly>
-                        <button onclick="incrementarCantidad('Mochis')">+</button>
-                    </div>
-                </td>
-                <td id="total-Mochis">0</td>
-            </tr>
-            <tr>
-                <td>Refresco de frambuesa</td>
-                <td>15</td>
-                <td>
-                    <div class="quantity-controls">
-                        <button onclick="decrementarCantidad('Refresco de frambuesa')">-</button>
-                        <input type="number" id="cantidad-Refresco de frambuesa" value="0" min="0" readonly>
-                        <button onclick="incrementarCantidad('Refresco de frambuesa')">+</button>
-                    </div>
-                </td>
-                <td id="total-Refresco de frambuesa">0</td>
-            </tr>
-            <tr>
-                <td>Café</td>
-                <td>10</td>
-                <td>
-                    <div class="quantity-controls">
-                        <button onclick="decrementarCantidad('Café')">-</button>
-                        <input type="number" id="cantidad-Café" value="0" min="0" readonly>
-                        <button onclick="incrementarCantidad('Café')">+</button>
-                    </div>
-                </td>
-                <td id="total-Café">0</td>
-            </tr>
-            <tr>
-                <td>Té Helado</td>
-                <td>20</td>
-                <td>
-                    <div class="quantity-controls">
-                        <button onclick="decrementarCantidad('Té Helado')">-</button>
-                        <input type="number" id="cantidad-Té Helado" value="0" min="0" readonly>
-                        <button onclick="incrementarCantidad('Té Helado')">+</button>
-                    </div>
-                </td>
-                <td id="total-Té Helado">0</td>
-            </tr>
-            <tr>
-                <td>Batido de Chocolate</td>
-                <td>15</td>
-                <td>
-                    <div class="quantity-controls">
-                        <button onclick="decrementarCantidad('Batido de Chocolate')">-</button>
-                        <input type="number" id="cantidad-Batido de Chocolate" value="0" min="0" readonly>
-                        <button onclick="incrementarCantidad('Batido de Chocolate')">+</button>
-                    </div>
-                </td>
-                <td id="total-Batido de Chocolate">0</td>
-            </tr>
+            <script>
+                for (const producto in precios) {
+                    document.write(`
+                        <tr>
+                            <td>${producto}</td>
+                            <td>${precios[producto]}</td>
+                            <td>
+                                <div class="quantity-controls">
+                                    <button onclick="decrementarCantidad('${producto}')">-</button>
+                                    <input type="number" id="cantidad-${producto}" value="0" min="0" readonly>
+                                    <button onclick="incrementarCantidad('${producto}')">+</button>
+                                </div>
+                            </td>
+                            <td id="total-${producto}">0</td>
+                        </tr>
+                    `);
+                }
+            </script>
         </tbody>
         <tfoot>
             <tr>
