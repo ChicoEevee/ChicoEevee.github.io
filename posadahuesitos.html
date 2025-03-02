@@ -42,18 +42,19 @@
     </style>
     <script>
         const precios = {
-                "Hidromiel Asgardiana": 20,
-                "Copa de Sangre": 10,
-                "Leche Lunar": 10,
-                "Copa de Hierbas Elficas": 10,
-                "Elixir Rejuvenecedor": 10,
-                "Elixir Cósmico": 10,
-                "Pancakes de duende": 15,
-                "Estofado de setas": 15,
-                "Entrecot divino": 20,
-                "Ensalada de druida": 15,
-                "Pinchitos de dragón": 15,
-                "Yogurt Tres Lunas": 10
+            "Estofado de Cocodrilo": 40,
+            "Estofado de Hada": 40,
+            "Empanada de Casqueria de Troll": 40,
+            "Filete de Minotauro": 40,
+            "Brocheta de ojos de rana": 40,
+            "Cerveza del Troll": 40,
+            "Trago de Sangre de mantícora": 40,
+            "Whiskey": 40,
+            "Cerveza con Mantequilla": 40,
+            "Copa de Lagrimas de Sirena": 40,
+            "Pack 5x5": 400,
+            "Pack 10x10": 800,
+            "Pack 20x20": 1600
         };
 
         function incrementarCantidad(producto) {
@@ -70,16 +71,22 @@
             }
         }
 
+        function actualizarCantidad(producto) {
+            const input = document.getElementById(`cantidad-${producto}`);
+            if (isNaN(input.value) || input.value < 0) {
+                input.value = 0;
+            }
+            calcularTotal();
+        }
+
         function calcularTotal() {
             let totalGeneral = 0;
-
             for (const producto in precios) {
                 const cantidad = document.getElementById(`cantidad-${producto}`).value;
                 const totalProducto = cantidad * precios[producto];
                 document.getElementById(`total-${producto}`).textContent = totalProducto;
                 totalGeneral += totalProducto;
             }
-
             document.getElementById('total-general').textContent = totalGeneral;
         }
 
@@ -93,7 +100,7 @@
     </script>
 </head>
 <body>
-    <h1>LAS TRES LUNAS</h1>
+    <h1>LA POSADA DE LOS MUERTOS</h1>
     <table>
         <thead>
             <tr>
@@ -113,7 +120,7 @@
                             <td>
                                 <div class="quantity-controls">
                                     <button onclick="decrementarCantidad('${producto}')">-</button>
-                                    <input type="number" id="cantidad-${producto}" value="0" min="0" readonly>
+                                    <input type="number" id="cantidad-${producto}" value="0" min="0" oninput="actualizarCantidad('${producto}')">
                                     <button onclick="incrementarCantidad('${producto}')">+</button>
                                 </div>
                             </td>
