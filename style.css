@@ -22,6 +22,7 @@ body {
 }
 
 .pokemon-info {
+    border: 3px solid #ca9531;
     background: #1a1a1a;
     border-radius: 1.25rem;
     padding: 1.5rem;
@@ -80,6 +81,7 @@ body {
 }
 
 .pokemon-stats {
+    border: 3px solid #ca9531;
     background: #1a1a1a;
     border-radius: 1.25rem;
     padding: 1.5rem;
@@ -125,6 +127,7 @@ body {
 }
 
 .pokemon-skins {
+    border: 3px solid #ca9531;
     background: #1a1a1a;
     border-radius: 1.5rem;
     padding: 2rem;
