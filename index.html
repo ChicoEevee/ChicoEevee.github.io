@@ -1,11 +1,621 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width" content="height=device-height">
-<link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
-	<title>ElChicoEevee</title>
+    <meta charset="UTF-8">
+    <title>ChicoEevee DB</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
- <frameset cols="auto" border="0">
-   <frame src="portada.html" noresize="noresize" name="principal">
- </frameset>
+<body>
+    <img src="images/logo.png" style="display: block; margin: 0 auto;">
+    <div class="home-grid">
+      
+            <a class="home-card" href="pokemon/Venusaur.html">
+            <img src="images/t_Square_Venusaur.png"
+                alt="Venusaur"
+                onerror="this.style.display='none'">
+            <div class="home-name">Venusaur</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Charizard.html">
+            <img src="images/t_Square_Charizard.png"
+                alt="Charizard"
+                onerror="this.style.display='none'">
+            <div class="home-name">Charizard</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/CharizardX.html">
+            <img src="images/t_Square_CharizardX.png"
+                alt="Mega Charizard X"
+                onerror="this.style.display='none'">
+            <div class="home-name">Mega Charizard X</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/CharizardY.html">
+            <img src="images/t_Square_CharizardY.png"
+                alt="Mega Charizard Y"
+                onerror="this.style.display='none'">
+            <div class="home-name">Mega Charizard Y</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Lucario.html">
+            <img src="images/t_Square_Lucario.png"
+                alt="Lucario"
+                onerror="this.style.display='none'">
+            <div class="home-name">Lucario</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/MEGALucario.html">
+            <img src="images/t_Square_MEGALucario.png"
+                alt="Mega Lucario"
+                onerror="this.style.display='none'">
+            <div class="home-name">Mega Lucario</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Gyarados.html">
+            <img src="images/t_Square_Gyarados.png"
+                alt="Gyarados"
+                onerror="this.style.display='none'">
+            <div class="home-name">Gyarados</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/MegaGyarados.html">
+            <img src="images/t_Square_MegaGyarados.png"
+                alt="Mega Gyarados"
+                onerror="this.style.display='none'">
+            <div class="home-name">Mega Gyarados</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Single.html">
+            <img src="images/t_Square_Urshifu_Single.png"
+                alt="Urshifu"
+                onerror="this.style.display='none'">
+            <div class="home-name">Urshifu</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Rapid.html">
+            <img src="images/t_Square_Urshifu_Rapid.png"
+                alt="Urshifu"
+                onerror="this.style.display='none'">
+            <div class="home-name">Urshifu</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Aegislash.html">
+            <img src="images/t_Square_Aegislash.png"
+                alt="Aegislash"
+                onerror="this.style.display='none'">
+            <div class="home-name">Aegislash</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/MewtwoX.html">
+            <img src="images/t_Square_MewtwoX.png"
+                alt="Mewtwo"
+                onerror="this.style.display='none'">
+            <div class="home-name">Mewtwo</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/MewtwoY.html">
+            <img src="images/t_Square_MewtwoY.png"
+                alt="Mewtwo"
+                onerror="this.style.display='none'">
+            <div class="home-name">Mewtwo</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Zacian.html">
+            <img src="images/t_Square_Zacian.png"
+                alt="Zacian"
+                onerror="this.style.display='none'">
+            <div class="home-name">Zacian</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Blastoise.html">
+            <img src="images/t_Square_Blastoise.png"
+                alt="Blastoise"
+                onerror="this.style.display='none'">
+            <div class="home-name">Blastoise</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Pikachu.html">
+            <img src="images/t_Square_Pikachu.png"
+                alt="Pikachu"
+                onerror="this.style.display='none'">
+            <div class="home-name">Pikachu</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Ninetales.html">
+            <img src="images/t_Square_Ninetales.png"
+                alt="Alolan Ninetales"
+                onerror="this.style.display='none'">
+            <div class="home-name">Alolan Ninetales</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Wigglytuff.html">
+            <img src="images/t_Square_Wigglytuff.png"
+                alt="Wigglytuff"
+                onerror="this.style.display='none'">
+            <div class="home-name">Wigglytuff</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Machamp.html">
+            <img src="images/t_Square_Machamp.png"
+                alt="Machamp"
+                onerror="this.style.display='none'">
+            <div class="home-name">Machamp</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Slowbro.html">
+            <img src="images/t_Square_Slowbro.png"
+                alt="Slowbro"
+                onerror="this.style.display='none'">
+            <div class="home-name">Slowbro</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Gengar.html">
+            <img src="images/t_Square_Gengar.png"
+                alt="Gengar"
+                onerror="this.style.display='none'">
+            <div class="home-name">Gengar</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Blissey.html">
+            <img src="images/t_Square_Blissey.png"
+                alt="Blissey"
+                onerror="this.style.display='none'">
+            <div class="home-name">Blissey</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/MrMime.html">
+            <img src="images/t_Square_MrMime.png"
+                alt="Mr. Mime"
+                onerror="this.style.display='none'">
+            <div class="home-name">Mr. Mime</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Snorlax.html">
+            <img src="images/t_Square_Snorlax.png"
+                alt="Snorlax"
+                onerror="this.style.display='none'">
+            <div class="home-name">Snorlax</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Mamoswine.html">
+            <img src="images/t_Square_Mamoswine.png"
+                alt="Mamoswine"
+                onerror="this.style.display='none'">
+            <div class="home-name">Mamoswine</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Gardevoir.html">
+            <img src="images/t_Square_Gardevoir.png"
+                alt="Gardevoir"
+                onerror="this.style.display='none'">
+            <div class="home-name">Gardevoir</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Absol.html">
+            <img src="images/t_Square_Absol.png"
+                alt="Absol"
+                onerror="this.style.display='none'">
+            <div class="home-name">Absol</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Garchomp.html">
+            <img src="images/t_Square_Garchomp.png"
+                alt="Garchomp"
+                onerror="this.style.display='none'">
+            <div class="home-name">Garchomp</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Crustle.html">
+            <img src="images/t_Square_Crustle.png"
+                alt="Crustle"
+                onerror="this.style.display='none'">
+            <div class="home-name">Crustle</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Greninja.html">
+            <img src="images/t_Square_Greninja.png"
+                alt="Greninja"
+                onerror="this.style.display='none'">
+            <div class="home-name">Greninja</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Talonflame.html">
+            <img src="images/t_Square_Talonflame.png"
+                alt="Talonflame"
+                onerror="this.style.display='none'">
+            <div class="home-name">Talonflame</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Zeraora.html">
+            <img src="images/t_Square_Zeraora.png"
+                alt="Zeraora"
+                onerror="this.style.display='none'">
+            <div class="home-name">Zeraora</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Sylveon.html">
+            <img src="images/t_Square_Sylveon.png"
+                alt="Sylveon"
+                onerror="this.style.display='none'">
+            <div class="home-name">Sylveon</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Decidueye.html">
+            <img src="images/t_Square_Decidueye.png"
+                alt="Decidueye"
+                onerror="this.style.display='none'">
+            <div class="home-name">Decidueye</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Cinderace.html">
+            <img src="images/t_Square_Cinderace.png"
+                alt="Cinderace"
+                onerror="this.style.display='none'">
+            <div class="home-name">Cinderace</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Eldegoss.html">
+            <img src="images/t_Square_Eldegoss.png"
+                alt="Eldegoss"
+                onerror="this.style.display='none'">
+            <div class="home-name">Eldegoss</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Cramorant.html">
+            <img src="images/t_Square_Cramorant.png"
+                alt="Cramorant"
+                onerror="this.style.display='none'">
+            <div class="home-name">Cramorant</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Tsareena.html">
+            <img src="images/t_Square_Tsareena.png"
+                alt="Tsareena"
+                onerror="this.style.display='none'">
+            <div class="home-name">Tsareena</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Greedent.html">
+            <img src="images/t_Square_Greedent.png"
+                alt="Greedent"
+                onerror="this.style.display='none'">
+            <div class="home-name">Greedent</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Dragonite.html">
+            <img src="images/t_Square_Dragonite.png"
+                alt="Dragonite"
+                onerror="this.style.display='none'">
+            <div class="home-name">Dragonite</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Trevenant.html">
+            <img src="images/t_Square_Trevenant.png"
+                alt="Trevenant"
+                onerror="this.style.display='none'">
+            <div class="home-name">Trevenant</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Hoopa.html">
+            <img src="images/t_Square_Hoopa.png"
+                alt="Hoopa"
+                onerror="this.style.display='none'">
+            <div class="home-name">Hoopa</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Duraludon.html">
+            <img src="images/t_Square_Duraludon.png"
+                alt="Duraludon"
+                onerror="this.style.display='none'">
+            <div class="home-name">Duraludon</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Azumarill.html">
+            <img src="images/t_Square_Azumarill.png"
+                alt="Azumarill"
+                onerror="this.style.display='none'">
+            <div class="home-name">Azumarill</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Espeon.html">
+            <img src="images/t_Square_Espeon.png"
+                alt="Espeon"
+                onerror="this.style.display='none'">
+            <div class="home-name">Espeon</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Delphox.html">
+            <img src="images/t_Square_Delphox.png"
+                alt="Delphox"
+                onerror="this.style.display='none'">
+            <div class="home-name">Delphox</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Glaceon.html">
+            <img src="images/t_Square_Glaceon.png"
+                alt="Glaceon"
+                onerror="this.style.display='none'">
+            <div class="home-name">Glaceon</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Buzzwole.html">
+            <img src="images/t_Square_Buzzwole.png"
+                alt="Buzzwole"
+                onerror="this.style.display='none'">
+            <div class="home-name">Buzzwole</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Tyranitar.html">
+            <img src="images/t_Square_Tyranitar.png"
+                alt="Tyranitar"
+                onerror="this.style.display='none'">
+            <div class="home-name">Tyranitar</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Mew.html">
+            <img src="images/t_Square_Mew.png"
+                alt="Mew"
+                onerror="this.style.display='none'">
+            <div class="home-name">Mew</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Dodrio.html">
+            <img src="images/t_Square_Dodrio.png"
+                alt="Dodrio"
+                onerror="this.style.display='none'">
+            <div class="home-name">Dodrio</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Scizor.html">
+            <img src="images/t_Square_Scizor.png"
+                alt="Scizor"
+                onerror="this.style.display='none'">
+            <div class="home-name">Scizor</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Clefable.html">
+            <img src="images/t_Square_Clefable.png"
+                alt="Clefable"
+                onerror="this.style.display='none'">
+            <div class="home-name">Clefable</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Zoroark.html">
+            <img src="images/t_Square_Zoroark.png"
+                alt="Zoroark"
+                onerror="this.style.display='none'">
+            <div class="home-name">Zoroark</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Sableye.html">
+            <img src="images/t_Square_Sableye.png"
+                alt="Sableye"
+                onerror="this.style.display='none'">
+            <div class="home-name">Sableye</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Comfey.html">
+            <img src="images/t_Square_Comfey.png"
+                alt="Comfey"
+                onerror="this.style.display='none'">
+            <div class="home-name">Comfey</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Dragapult.html">
+            <img src="images/t_Square_Dragapult.png"
+                alt="Dragapult"
+                onerror="this.style.display='none'">
+            <div class="home-name">Dragapult</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Goodra.html">
+            <img src="images/t_Square_Goodra.png"
+                alt="Goodra"
+                onerror="this.style.display='none'">
+            <div class="home-name">Goodra</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Lapras.html">
+            <img src="images/t_Square_Lapras.png"
+                alt="Lapras"
+                onerror="this.style.display='none'">
+            <div class="home-name">Lapras</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Umbreon.html">
+            <img src="images/t_Square_Umbreon.png"
+                alt="Umbreon"
+                onerror="this.style.display='none'">
+            <div class="home-name">Umbreon</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Chandelure.html">
+            <img src="images/t_Square_Chandelure.png"
+                alt="Chandelure"
+                onerror="this.style.display='none'">
+            <div class="home-name">Chandelure</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Leafeon.html">
+            <img src="images/t_Square_Leafeon.png"
+                alt="Leafeon"
+                onerror="this.style.display='none'">
+            <div class="home-name">Leafeon</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Inteleon.html">
+            <img src="images/t_Square_Inteleon.png"
+                alt="Inteleon"
+                onerror="this.style.display='none'">
+            <div class="home-name">Inteleon</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Blaziken.html">
+            <img src="images/t_Square_Blaziken.png"
+                alt="Blaziken"
+                onerror="this.style.display='none'">
+            <div class="home-name">Blaziken</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Mimikyu.html">
+            <img src="images/t_Square_Mimikyu.png"
+                alt="Mimikyu"
+                onerror="this.style.display='none'">
+            <div class="home-name">Mimikyu</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Meowscara.html">
+            <img src="images/t_Square_Meowscara.png"
+                alt="Meowscarada"
+                onerror="this.style.display='none'">
+            <div class="home-name">Meowscarada</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Falinks.html">
+            <img src="images/t_Square_Falinks.png"
+                alt="Falinks"
+                onerror="this.style.display='none'">
+            <div class="home-name">Falinks</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Miraidon.html">
+            <img src="images/t_Square_Miraidon.png"
+                alt="Miraidon"
+                onerror="this.style.display='none'">
+            <div class="home-name">Miraidon</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Ceruledge.html">
+            <img src="images/t_Square_Ceruledge.png"
+                alt="Ceruledge"
+                onerror="this.style.display='none'">
+            <div class="home-name">Ceruledge</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/HoOh.html">
+            <img src="images/t_Square_HoOh.png"
+                alt="Ho-Oh"
+                onerror="this.style.display='none'">
+            <div class="home-name">Ho-Oh</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Armarouge.html">
+            <img src="images/t_Square_Armarouge.png"
+                alt="Armarouge"
+                onerror="this.style.display='none'">
+            <div class="home-name">Armarouge</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Darkrai.html">
+            <img src="images/t_Square_Darkrai.png"
+                alt="Darkrai"
+                onerror="this.style.display='none'">
+            <div class="home-name">Darkrai</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Psyduck.html">
+            <img src="images/t_Square_Psyduck.png"
+                alt="Psyduck"
+                onerror="this.style.display='none'">
+            <div class="home-name">Psyduck</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Tinkaton.html">
+            <img src="images/t_Square_Tinkaton.png"
+                alt="Tinkaton"
+                onerror="this.style.display='none'">
+            <div class="home-name">Tinkaton</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Rapidash.html">
+            <img src="images/t_Square_Rapidash.png"
+                alt="Galarian Rapidash"
+                onerror="this.style.display='none'">
+            <div class="home-name">Galarian Rapidash</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Suicune.html">
+            <img src="images/t_Square_Suicune.png"
+                alt="Suicune"
+                onerror="this.style.display='none'">
+            <div class="home-name">Suicune</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Raichu.html">
+            <img src="images/t_Square_Raichu.png"
+                alt="Alolan Raichu"
+                onerror="this.style.display='none'">
+            <div class="home-name">Alolan Raichu</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Alcremie.html">
+            <img src="images/t_Square_Alcremie.png"
+                alt="Alcremie"
+                onerror="this.style.display='none'">
+            <div class="home-name">Alcremie</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Latias.html">
+            <img src="images/t_Square_Latias.png"
+                alt="Latias"
+                onerror="this.style.display='none'">
+            <div class="home-name">Latias</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Latios.html">
+            <img src="images/t_Square_Latios.png"
+                alt="Latios"
+                onerror="this.style.display='none'">
+            <div class="home-name">Latios</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Pawmot.html">
+            <img src="images/t_Square_Pawmot.png"
+                alt="Pawmot"
+                onerror="this.style.display='none'">
+            <div class="home-name">Pawmot</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Dhelmise.html">
+            <img src="images/t_Square_Dhelmise.png"
+                alt="Dhelmise"
+                onerror="this.style.display='none'">
+            <div class="home-name">Dhelmise</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Vaporeon.html">
+            <img src="images/t_Square_Vaporeon.png"
+                alt="Vaporeon"
+                onerror="this.style.display='none'">
+            <div class="home-name">Vaporeon</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Empoleon.html">
+            <img src="images/t_Square_Empoleon.png"
+                alt="Empoleon"
+                onerror="this.style.display='none'">
+            <div class="home-name">Empoleon</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Sirfetch.html">
+            <img src="images/t_Square_Sirfetch.png"
+                alt="Sirfetch'd"
+                onerror="this.style.display='none'">
+            <div class="home-name">Sirfetch'd</div>
+            </a>
+            
+            <a class="home-card" href="pokemon/Meowth.html">
+            <img src="images/t_Square_Meowth.png"
+                alt="Meowth"
+                onerror="this.style.display='none'">
+            <div class="home-name">Meowth</div>
+            </a>
+            
+    </div>
+    <p style="text-align: center;">All assets, images and texts are owned by © 2021 Pokémon. ©1995–2026 Nintendo Creatures Inc. / GAME FREAK inc. © 2021 Tencent. All rights reserved.<br> I am not affiliated, associated, authorized, endorsed by, or in any way officially connected with any of the listed companies.</p>
+
+    </body>
 </html>
