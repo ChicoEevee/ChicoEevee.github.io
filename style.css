@@ -6,10 +6,6 @@
     --text-main: #e5e5e5;
 }
 
-/* -------------------------
-   GLOBAL
-------------------------- */
-
 body {
     margin: 0;
     font-family: 'Saira Semi Condensed', system-ui, sans-serif;
@@ -32,20 +28,11 @@ body::before {
     );
     z-index: -1;
 }
-
-/* -------------------------
-   PAGE WRAPPER
-------------------------- */
-
 .pokemon-page {
     max-width: auto;
     margin: auto;
     padding: 2rem;
 }
-
-/* -------------------------
-   TOP SECTION
-------------------------- */
 
 .pokemon-top {
     display: grid;
@@ -54,17 +41,12 @@ body::before {
     margin-bottom: 2.5rem;
 }
 
-/* -------------------------
-   INFO PANEL (HERO)
-------------------------- */
-
 .pokemon-info {
     background: linear-gradient(180deg, #1a1a1a, #141414);
     border-radius: 1.25rem;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 0.875rem;
     box-shadow:
         0 0 0 1px rgba(255,191,59,0.4),
         0 0 18px rgba(255,191,59,0.25);
@@ -74,10 +56,6 @@ body::before {
     position: relative;
 }
 
-.pokemon-info img {
-    width: 100%;
-    border-radius: 1rem;
-}
 
 .image-fallback {
     display: none;
@@ -92,9 +70,6 @@ body::before {
     color: var(--accent);
 }
 
-/* -------------------------
-   TEXT
-------------------------- */
 
 .pokemon-name {
     margin: 0;
@@ -118,10 +93,6 @@ body::before {
     opacity: 0.85;
 }
 
-/* -------------------------
-   TAGS
-------------------------- */
-
 .pokemon-tags {
     display: flex;
     flex-wrap: wrap;
@@ -138,10 +109,6 @@ body::before {
     backdrop-filter: blur(6px);
 }
 
-/* -------------------------
-   STATS PANEL
-------------------------- */
-
 .pokemon-stats {
     background: linear-gradient(180deg, #181818, #121212);
     border-radius: 1.25rem;
@@ -156,16 +123,13 @@ body::before {
     color: var(--accent);
 }
 
-/* -------------------------
-   STATS TABLE
-------------------------- */
 
 .stats-table-wrapper {
     overflow-x: auto;
 }
 
 .stats-table {
-    width: 100%;
+    width: 80%;
     border-collapse: collapse;
     font-size: 0.8rem;
 }
@@ -199,10 +163,10 @@ body::before {
     font-weight: 700;
     color: var(--accent);
 }
-
-/* -------------------------
-   SKINS / ARTS SECTIONS
-------------------------- */
+.stats-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* smooth scroll for iOS */
+}
 
 .pokemon-skins {
     background: linear-gradient(180deg, #181818, #121212);
@@ -222,7 +186,7 @@ body::before {
 
 .skins-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20.5rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
     gap: 1.25rem;
 }
 
@@ -231,10 +195,6 @@ body::before {
     grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
     gap: 1.25rem;
 }
-/* -------------------------
-   SKIN CARD
-------------------------- */
-
 .skin-card {
     background: linear-gradient(180deg, #222, #181818);
     border-radius: 1rem;
@@ -252,10 +212,6 @@ body::before {
     font-size: 16px;
 }
 
-.moveset-card img {
-    width: 100%;
-    border-radius: 0.75rem;
-}
 .skin-card:hover {
     transform: translateY(-4px);
     box-shadow:
@@ -263,14 +219,13 @@ body::before {
         0 0 14px rgba(255,191,59,0.2);
 }
 
-.skin-card img {
-    width: 100%;
-    border-radius: 0.75rem;
+.pokemon-info img,
+.skin-card img,
+.moveset-card img {
+    max-width: 100%;
+    height: auto;
 }
 
-/* -------------------------
-   HOME PAGE
-------------------------- */
 
 .home-grid {
     display: grid;
