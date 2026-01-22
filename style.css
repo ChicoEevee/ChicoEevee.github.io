@@ -310,7 +310,7 @@ body {
     color: #ffd97a;
 }
 
-.bp-card.paid .bp-header {
+.bp-card.pass-paid .bp-header {
     background: linear-gradient(180deg, #f59e0b, #b45309);
     color: #ffe0fc;
 }
