@@ -17,17 +17,6 @@ body {
     color: var(--text-main);
 }
 
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: radial-gradient(
-        circle at top,
-        rgba(255,191,59,0.08),
-        rgba(0,0,0,0.75)
-    );
-    z-index: -1;
-}
 .pokemon-page {
     max-width: auto;
     margin: auto;
@@ -264,4 +253,74 @@ body::before {
 .home-name {
     font-size: 0.9rem;
     font-weight: 600;
+}
+
+/* ================= BATTLE PASS ================= */
+
+.battlepass-page {
+    max-width: 95vw;
+    margin: auto;
+    padding: 2rem;
+}
+
+.battlepass-title {
+    font-size: 2.5rem;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    margin-bottom: 2rem;
+}
+
+/* 🔥 THIS IS THE GRID (MOST IMPORTANT PART) */
+.bp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+/* ---------------- Cards ---------------- */
+
+.bp-card {
+    background: linear-gradient(180deg, #222, #181818);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    text-align: center;
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.06),
+        0 10px 26px rgba(0,0,0,0.45);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.bp-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 14px 30px rgba(0,0,0,0.55),
+        0 0 18px rgba(255,191,59,0.25);
+}
+
+.bp-header {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.4rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.bp-card.free .bp-header {
+    background: linear-gradient(180deg, #7b2cbf, #5a189a);
+    color: #ffd97a;
+}
+
+.bp-card.paid .bp-header {
+    background: linear-gradient(180deg, #f59e0b, #b45309);
+    color: #ffe0fc;
+}
+
+.bp-card img {
+    max-width: 50%;
+    padding: 0.75rem;
+}
+
+.bp-title {
+    font-size: 0.85rem;
+    padding: 0.5rem 0.5rem 0.75rem;
 }
